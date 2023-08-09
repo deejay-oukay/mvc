@@ -17,6 +17,7 @@ public class Controller {
         teacher.setDisciplines(disciplines);
         teacher.setRating(rating);
         teacher.setDepartment(department);
+        System.out.println(teacher.toString());
     }
 
     public static void createStudent(String name, String lastName, Calendar birthday, String group, String speciality,
@@ -25,5 +26,14 @@ public class Controller {
         student.setGroup(group);
         student.setSpeciality(speciality);
         student.setAverageMark(averageMark);
+        System.out.println(student.toString());
+    }
+
+    public static ArrayList<Teacher> showTeachers() {
+        return service.getTeachersList();
+    }
+
+    public static ArrayList<Student> showStudents() {
+        return service.getStudentsList();
     }
 }

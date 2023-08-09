@@ -28,7 +28,8 @@ public abstract class User {
     @Override
     public String toString() {
         return getClass().getName() + ", name=" + name + ", lastName=" + lastName + ", birthday="
-                + birthday;
+                + birthday.get(Calendar.DAY_OF_MONTH) + "." + birthday.get(Calendar.MONTH) + "."
+                + birthday.get(Calendar.YEAR);
     }
 
 }
